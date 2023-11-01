@@ -1,0 +1,18 @@
+version: '3'
+services:
+  my-node-app:
+    image: memcached_demo_app # Replace with the name of your Node.js image
+    ports:
+      - "3000:3000"
+    networks:
+      - my-network
+
+  my-memcached:
+    image: memcached
+    ports:
+      - "11211:11211"
+    networks:
+      - my-network
+
+networks:
+  my-network:

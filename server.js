@@ -2,7 +2,7 @@ const express = require('express');
 const Memcached = require('memcached');
 
 const app = express();
-const memcached = new Memcached('localhost:11211'); // Change this to your Memcached server's address
+const memcached = new Memcached('my-memcached:11211'); // Change this to your Memcached server's address
 
 // In-memory "database" (for demonstration purposes)
 const database = {};
